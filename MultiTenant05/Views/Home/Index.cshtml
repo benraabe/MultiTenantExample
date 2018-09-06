@@ -1,0 +1,25 @@
+﻿@using MultiTenant05.Models;
+
+@model PageModel
+
+@{
+                /**/
+
+                ViewBag.Title = @Model.Name;
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- If this is a client site with a theme defined,
+     reference it here. -->
+@if (!string.IsNullOrEmpty(Model.Theme))
+{
+    @section styles {
+        <link type="text/css" rel="stylesheet" href="Content/@Model.Theme" />
+    }
+}
+
+<!-- This is the page body that renders in the
+     RenderBody() method of the default layout. -->
+<h1>@Model.Name</h1>
+<h2>@Model.Title</h2>
+

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!-- This is the default stylesheet for
+         the root site and all clients. -->
+    <link type="text/css" rel="stylesheet" href="Content/site.css" />
+
+    <!-- If the PageModel has a CSS file defined,
+         it will reference it here. -->
+    @RenderSection("styles", false)
+</head>
+<body>
+    <div id="page">
+        <!-- The content of the Index view will be rendered here. -->
+        @RenderBody()
+    </div>
+</body>
+</html>
